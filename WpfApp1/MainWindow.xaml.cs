@@ -21,6 +21,8 @@ namespace WpfApp1
     public partial class MainWindow : Window
     {
         private string partOne = "";
+        private string partTwo = "";
+        private string action;
 
         public MainWindow()
         {
@@ -33,6 +35,14 @@ namespace WpfApp1
             string buttonValue = ((Button)sender).Content.ToString();
             resultBox.Text = resultBox.Text + buttonValue;
             partOne = partOne + buttonValue;
+        }
+
+        private void plusBtn_Click(object sender, RoutedEventArgs e)
+        {
+            resultBox.Text = resultBox.Text + "+";
+            partTwo = partOne;
+            partOne = "";
+            action = "+";
         }
     }
 }

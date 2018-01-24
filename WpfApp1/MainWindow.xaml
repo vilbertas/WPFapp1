@@ -19,6 +19,8 @@
         <Button x:Name="num9btn" Content="9" HorizontalAlignment="Left" VerticalAlignment="Top" Width="36" Margin="331,144,0,0" Height="34" Click="num1btn_Click"/>
         <Button x:Name="num5btn" Content="5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="36" Margin="416,89,0,0" Height="34" Click="num1btn_Click"/>
         <Button x:Name="executeBtn" Content="=" HorizontalAlignment="Left" Margin="367,258,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="plusBtn" Content="+" HorizontalAlignment="Left" Height="38" Margin="39,258,0,0" VerticalAlignment="Top" Width="64" RenderTransformOrigin="0.613,0.491" Click="plusBtn_Click"/>
+        <Button x:Name="minusBtn" Content="-" HorizontalAlignment="Left" Height="38" Margin="155,258,0,0" VerticalAlignment="Top" Width="70"/>
 
     </Grid>
 </Window>
