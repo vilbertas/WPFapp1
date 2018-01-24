@@ -22,6 +22,7 @@ namespace WpfApp1
     {
         private string partOne = "";
         private string partTwo = "";
+        string result = "";
         private string action;
 
         public MainWindow()
@@ -43,6 +44,30 @@ namespace WpfApp1
             partTwo = partOne;
             partOne = "";
             action = "+";
+        }
+
+        private void minusBtn_Click(object sender, RoutedEventArgs e)
+        {
+            resultBox.Text = resultBox.Text + "-";
+            partTwo = partOne;
+            partOne = "";
+            action = "-";
+        }
+
+        private void executeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            int partOneNumber = int.Parse(partOne);
+            int partTwoNumber = int.Parse(partTwo);
+            if (action == "+")
+            {
+                resultBox.Text = (partTwoNumber + partOneNumber).ToString();
+            }
+            else if (action == "-")
+            {
+                resultBox.Text = (partTwoNumber - partOneNumber).ToString();
+            }
+            
+            partOne = resultBox.Text;
         }
     }
 }
