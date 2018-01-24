@@ -23,6 +23,12 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+        
+        }
+
+        private void num1btn_Click(object sender, RoutedEventArgs e)
+        {
+            resultBox.Text = resultBox.Text + ((Button)sender).Content;
         }
     }
 }

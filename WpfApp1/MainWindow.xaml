@@ -7,6 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <TextBox HorizontalAlignment="Left" Height="3" Margin="-108,120,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="4"/>
+        <TextBox x:Name="resultBox" HorizontalAlignment="Left" Height="26" Margin="25,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="464" IsEnabled="False"/>
+        <Button x:Name="num1btn" Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="36" Margin="67,89,0,0" Height="34" Click="num1btn_Click"/>
+        <Button x:Name="num6btn" Content="6" HorizontalAlignment="Left" VerticalAlignment="Top" Width="36" Margin="67,144,0,0" Height="34" Click="num1btn_Click"/>
+        <Button x:Name="num2btn" Content="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="36" Margin="155,89,0,0" Height="34" Click="num1btn_Click"/>
+        <Button x:Name="num7btn" Content="7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="36" Margin="155,144,0,0" Height="34" Click="num1btn_Click"/>
+        <Button x:Name="num3btn" Content="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="36" Margin="239,89,0,0" Height="34" Click="num1btn_Click"/>
+        <Button x:Name="num8btn" Content="8" HorizontalAlignment="Left" VerticalAlignment="Top" Width="36" Margin="239,144,0,0" Height="34" Click="num1btn_Click"/>
+        <Button x:Name="num4btn" Content="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="36" Margin="331,89,0,0" Height="34" Click="num1btn_Click"/>
+        <Button x:Name="num9btn" Content="9" HorizontalAlignment="Left" VerticalAlignment="Top" Width="36" Margin="331,144,0,0" Height="34" Click="num1btn_Click"/>
+        <Button x:Name="num5btn" Content="5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="36" Margin="416,89,0,0" Height="34" Click="num1btn_Click"/>
+        <Button x:Name="executeBtn" Content="=" HorizontalAlignment="Left" Margin="367,258,0,0" VerticalAlignment="Top" Width="75"/>
+
     </Grid>
 </Window>
