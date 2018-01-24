@@ -30,12 +30,6 @@ namespace TicTacToe
 
         }
 
-        private enum Player
-        {
-            X = 1,
-            O = 2
-        }
-
         private Player _player = Player.O; // false - x, true - 0 
         private int[,] _matrix = new int[,]
         {
