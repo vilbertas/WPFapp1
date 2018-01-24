@@ -24,5 +24,23 @@ namespace TicTacToe
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private bool _player = false; // false - x, true - 0 
+
+        private void buttonClicked(object sender, RoutedEventArgs e)
+        {
+            string coordinates = ((Button)sender).Tag.ToString();
+            int x = int.Parse(coordinates[0].ToString());
+            int y = int.Parse(coordinates[1].ToString());
+
+            _player = !_player;
+
+            ((Button)sender).Content = _player ? "0" : "x";
+
+        }
     }
 }
