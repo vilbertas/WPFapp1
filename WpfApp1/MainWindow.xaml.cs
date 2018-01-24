@@ -20,6 +20,8 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        private string partOne = "";
+
         public MainWindow()
         {
             InitializeComponent();
@@ -28,7 +30,9 @@ namespace WpfApp1
 
         private void num1btn_Click(object sender, RoutedEventArgs e)
         {
-            resultBox.Text = resultBox.Text + ((Button)sender).Content;
+            string buttonValue = ((Button)sender).Content.ToString();
+            resultBox.Text = resultBox.Text + buttonValue;
+            partOne = partOne + buttonValue;
         }
     }
 }
