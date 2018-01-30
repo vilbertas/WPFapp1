@@ -52,26 +52,16 @@ namespace WpfApp1
             int partTwoNumber = int.Parse(partTwo);
 
             Arithmetics arithmetics = new Arithmetics();
+            try
+            {
+                resultBox.Text = arithmetics.Calculate(partTwoNumber, partOneNumber, action).ToString();
+            }
+            catch (DivideByZeroException ex)
+            {
+                resultBox.Text = "Division by 0 not allowed";
+            }
 
-            resultBox.Text = arithmetics.Calculate(partTwoNumber, partOneNumber, action).ToString();
-            
-
-          //  if (action == "+")
-          //  {
-          //      resultBox.Text = (partTwoNumber + partOneNumber).ToString();
-          //  }
-           // else if (action == "-")
-           // {
-           //     resultBox.Text = (partTwoNumber - partOneNumber).ToString();
-           // }
-           // else if (action == "*")
-            //{
-           //     resultBox.Text = (partTwoNumber * partOneNumber).ToString();
-           // }
-           // else if (action == "/")
-           // {
-           //     resultBox.Text = (partTwoNumber / partOneNumber).ToString();
-           // }
+            //CLEAR MYGTUKA PRIDETI!!!!! NAMU DARBAS!!!!!
 
             partOne = resultBox.Text;
         }

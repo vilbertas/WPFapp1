@@ -23,6 +23,7 @@
         <Button x:Name="minusBtn" Content="-" HorizontalAlignment="Left" Height="38" Margin="155,258,0,0" VerticalAlignment="Top" Width="70" Click="action_Click"/>
         <Button x:Name="multiplyBtn" Content="*" HorizontalAlignment="Left" Height="26" Margin="39,208,0,0" VerticalAlignment="Top" Width="64" Click="action_Click"/>
         <Button x:Name="divideBtn" Content="/" HorizontalAlignment="Left" Height="26" Margin="155,208,0,0" VerticalAlignment="Top" Width="70" Click="action_Click"/>
+        <Button Content="0" HorizontalAlignment="Left" Margin="416,144,0,0" VerticalAlignment="Top" Width="36" Height="34" Click="num1btn_Click"/>
 
     </Grid>
 </Window>
