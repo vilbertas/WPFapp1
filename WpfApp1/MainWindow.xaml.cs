@@ -51,21 +51,10 @@ namespace WpfApp1
             int partOneNumber = int.Parse(partOne);
             int partTwoNumber = int.Parse(partTwo);
 
-            switch (action)
-            {
-                case "+":
-                    resultBox.Text = (partTwoNumber + partOneNumber).ToString();
-                    break;
-                case "-":
-                    resultBox.Text = (partTwoNumber - partOneNumber).ToString();
-                    break;
-                case "*":
-                    resultBox.Text = (partTwoNumber * partOneNumber).ToString();
-                    break;
-                case "/":
-                    resultBox.Text = (partTwoNumber / partOneNumber).ToString();
-                    break;
-            }
+            Arithmetics arithmetics = new Arithmetics();
+
+            resultBox.Text = arithmetics.Calculate(partTwoNumber, partOneNumber, action).ToString();
+            
 
           //  if (action == "+")
           //  {
@@ -87,9 +76,5 @@ namespace WpfApp1
             partOne = resultBox.Text;
         }
 
-        private void multiplyBtn_click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }
