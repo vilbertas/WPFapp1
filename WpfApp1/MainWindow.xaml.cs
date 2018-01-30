@@ -50,22 +50,39 @@ namespace WpfApp1
         {
             int partOneNumber = int.Parse(partOne);
             int partTwoNumber = int.Parse(partTwo);
-            if (action == "+")
+
+            switch (action)
             {
-                resultBox.Text = (partTwoNumber + partOneNumber).ToString();
+                case "+":
+                    resultBox.Text = (partTwoNumber + partOneNumber).ToString();
+                    break;
+                case "-":
+                    resultBox.Text = (partTwoNumber - partOneNumber).ToString();
+                    break;
+                case "*":
+                    resultBox.Text = (partTwoNumber * partOneNumber).ToString();
+                    break;
+                case "/":
+                    resultBox.Text = (partTwoNumber / partOneNumber).ToString();
+                    break;
             }
-            else if (action == "-")
-            {
-                resultBox.Text = (partTwoNumber - partOneNumber).ToString();
-            }
-            else if (action == "*")
-            {
-                resultBox.Text = (partTwoNumber * partOneNumber).ToString();
-            }
-            else if (action == "/")
-            {
-                resultBox.Text = (partTwoNumber / partOneNumber).ToString();
-            }
+
+          //  if (action == "+")
+          //  {
+          //      resultBox.Text = (partTwoNumber + partOneNumber).ToString();
+          //  }
+           // else if (action == "-")
+           // {
+           //     resultBox.Text = (partTwoNumber - partOneNumber).ToString();
+           // }
+           // else if (action == "*")
+            //{
+           //     resultBox.Text = (partTwoNumber * partOneNumber).ToString();
+           // }
+           // else if (action == "/")
+           // {
+           //     resultBox.Text = (partTwoNumber / partOneNumber).ToString();
+           // }
 
             partOne = resultBox.Text;
         }
