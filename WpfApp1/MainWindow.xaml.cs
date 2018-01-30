@@ -22,13 +22,13 @@ namespace WpfApp1
     {
         private string partOne = "";
         private string partTwo = "";
-        string result = "";
+       // string result = "";
         private string action;
 
         public MainWindow()
         {
             InitializeComponent();
-        
+
         }
 
         private void num1btn_Click(object sender, RoutedEventArgs e)
@@ -38,20 +38,12 @@ namespace WpfApp1
             partOne = partOne + buttonValue;
         }
 
-        private void plusBtn_Click(object sender, RoutedEventArgs e)
+        private void action_Click(object sender, RoutedEventArgs e)
         {
-            resultBox.Text = resultBox.Text + "+";
+            resultBox.Text = resultBox.Text + ((Button)sender).Content.ToString();
             partTwo = partOne;
             partOne = "";
-            action = "+";
-        }
-
-        private void minusBtn_Click(object sender, RoutedEventArgs e)
-        {
-            resultBox.Text = resultBox.Text + "-";
-            partTwo = partOne;
-            partOne = "";
-            action = "-";
+            action = ((Button)sender).Content.ToString();
         }
 
         private void executeBtn_Click(object sender, RoutedEventArgs e)
@@ -66,8 +58,21 @@ namespace WpfApp1
             {
                 resultBox.Text = (partTwoNumber - partOneNumber).ToString();
             }
-            
+            else if (action == "*")
+            {
+                resultBox.Text = (partTwoNumber * partOneNumber).ToString();
+            }
+            else if (action == "/")
+            {
+                resultBox.Text = (partTwoNumber / partOneNumber).ToString();
+            }
+
             partOne = resultBox.Text;
+        }
+
+        private void multiplyBtn_click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

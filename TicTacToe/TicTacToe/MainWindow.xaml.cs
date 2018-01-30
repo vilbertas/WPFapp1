@@ -39,18 +39,78 @@ namespace TicTacToe
 
         };
 
+        private Player? DetermineWinner() //klaustukas reiskia, kad reiksme gali but null
+        {
+            if (_matrix[0, 0] == 1 
+                && _matrix[0, 1] == 1 
+                && _matrix[0, 2] == 1)
+            {
+                return Player.X;
+            }
+            else if (_matrix[1, 0] == 1
+                && _matrix[1, 1] == 1
+                && _matrix[1, 2] == 1)
+            {
+                return Player.X;
+            }
+            else if (_matrix[2, 0] == 1
+                && _matrix[2, 1] == 1
+                && _matrix[2, 2] == 1)
+            {
+                return Player.X;
+            }
+            else if (_matrix[0, 0] == 1
+                && _matrix[1, 0] == 1
+                && _matrix[2, 0] == 1)
+            {
+                return Player.X;
+            }
+            else if (_matrix[0, 1] == 1
+                && _matrix[1, 1] == 1
+                && _matrix[2, 1] == 1)
+            {
+                return Player.X;
+            }
+            else if (_matrix[0, 2] == 1
+                && _matrix[1, 2] == 1
+                && _matrix[2, 2] == 1)
+            {
+                return Player.X;
+            }
+            else if (_matrix[0, 0] == 1
+                && _matrix[1, 1] == 1
+                && _matrix[2, 2] == 1)
+            {
+                return Player.X;
+            }
+            else if (_matrix[0, 2] == 1
+                && _matrix[1, 1] == 1
+                && _matrix[2, 0] == 1)
+            {
+                return Player.X;
+            }
+            return null;
+        }
+          
+
         private void buttonClicked(object sender, RoutedEventArgs e)
         {
             string coordinates = ((Button)sender).Tag.ToString();
-            int x = int.Parse(coordinates[0].ToString()) - 1;
-            int y = int.Parse(coordinates[1].ToString()) - 1;
+            int x = int.Parse(coordinates[0].ToString());
+            int y = int.Parse(coordinates[1].ToString());
 
             if (_matrix[x, y] == 0)
             {
                 _matrix[x, y] = (int)_player;
 
+                Player? winner = DetermineWinner();
+                if (winner != null)
+                {
+                    winnerLabel.Content = winner == Player.X ? "X" + " has won" : "0" + " has won";
+                }
+
                 ((Button)sender).Content = _player == Player.O ? "0" : "X";
-                ((Button)sender).Foreground = _player == Player.O ? Brushes.Blue : Brushes.Red;
+                ((Button)sender).Foreground = _player == Player.O ? Brushes.Blue : Brushes.Red;//nudazo nuliukus ir iksiukus
 
                 _player = _player == Player.O ? Player.X : Player.O;
             }
