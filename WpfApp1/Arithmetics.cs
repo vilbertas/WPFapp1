@@ -32,6 +32,9 @@ namespace WpfApp1
                         throw new DivideByZeroException();
                     }
                     break;
+                default:
+                    throw new Exception("action not found");
+
             }
             return result;
         }

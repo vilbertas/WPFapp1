@@ -60,11 +60,11 @@ namespace WpfApp1
             {
                 resultBox.Text = "Division by 0 not allowed";
             }
-
-            //CLEAR MYGTUKA PRIDETI!!!!! NAMU DARBAS!!!!!
-
             partOne = resultBox.Text;
         }
-
+        private void clearBtn_Click(object sender, RoutedEventArgs e)
+        {
+            resultBox.Text = "";
+        }
     }
 }
