@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="435.389" Width="585.992">
     <Grid Margin="0,0,3.2,-0.4">
-        <Button x:Name="StartBtn" Content="Start" HorizontalAlignment="Left" Height="53" Margin="215,298,0,0" VerticalAlignment="Top" Width="165"/>
+        <Button x:Name="StartBtn" Content="Start" HorizontalAlignment="Left" Height="53" Margin="215,298,0,0" VerticalAlignment="Top" Width="165" Click="StartBtn_Click"/>
         <Label x:Name="SecretWordLabel" Content="" HorizontalAlignment="Left" Height="50" Margin="282,37,0,0" VerticalAlignment="Top" Width="19" RenderTransformOrigin="2.638,0.471"/>
         <Label x:Name="tryCountLabel" Content="6" HorizontalAlignment="Left" Height="48" Margin="282,121,0,0" VerticalAlignment="Top" Width="22"/>
 
