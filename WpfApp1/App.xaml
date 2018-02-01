@@ -4,6 +4,17 @@
              xmlns:local="clr-namespace:WpfApp1"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
+        <Style x:Key="CustomWindowStyle" TargetType="{x:Type Window}">
+            <Setter Property="WindowStyle" Value="None"/>
+            <Setter Property="AllowsTransparency" Value="True"/>
+            <Setter Property="ResizeMode" Value="NoResize"/>
+            <Setter Property="Background" Value="MintCream"/>
+            <Setter Property="BorderBrush" Value="#0046E7"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            
+        </Style>
+
+
     </Application.Resources>
 </Application>

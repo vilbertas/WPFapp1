@@ -24,6 +24,7 @@ namespace WpfApp1
         private string partTwo = "";
        // string result = "";
         private string action;
+        private bool isSignSelected = false;
 
         public MainWindow()
         {
@@ -36,14 +37,26 @@ namespace WpfApp1
             string buttonValue = ((Button)sender).Content.ToString();
             resultBox.Text = resultBox.Text + buttonValue;
             partOne = partOne + buttonValue;
+            isSignSelected = false;
         }
 
         private void action_Click(object sender, RoutedEventArgs e)
         {
+            if (isSignSelected)
+            {
+                resultBox.Text = resultBox.Text.Substring(0, resultBox.Text.Length - 1).ToString();
+            }
+            else
+            {
+                partTwo = partOne;
+                partOne = "";
+            }
             resultBox.Text = resultBox.Text + ((Button)sender).Content.ToString();
-            partTwo = partOne;
-            partOne = "";
+
+            isSignSelected = true;
             action = ((Button)sender).Content.ToString();
+            
+
         }
 
         private void executeBtn_Click(object sender, RoutedEventArgs e)
@@ -64,7 +77,8 @@ namespace WpfApp1
         }
         private void clearBtn_Click(object sender, RoutedEventArgs e)
         {
-            resultBox.Text = "";
+            resultBox.Text = String.Empty;
+            partOne = "";
         }
     }
 }

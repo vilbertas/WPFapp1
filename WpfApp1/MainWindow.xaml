@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525"
+        Style="{StaticResource CustomWindowStyle}">
+    
     <Grid>
         <TextBox HorizontalAlignment="Left" Height="3" Margin="-108,120,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="4"/>
         <TextBox x:Name="resultBox" HorizontalAlignment="Left" Height="26" Margin="25,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="464" IsEnabled="False"/>
