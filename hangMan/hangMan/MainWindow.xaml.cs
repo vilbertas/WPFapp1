@@ -29,6 +29,11 @@ namespace hangMan
         private void StartBtn_Click(object sender, RoutedEventArgs e)
         {
             string[] words = File.ReadAllLines("words.txt");
+
+            Random random = new Random();
+            int randomIndex = random.Next(0, words.Length-1);
+            string secretword = words[randomIndex];
+
         }
     }
 }
